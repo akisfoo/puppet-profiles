@@ -3,11 +3,11 @@ class profiles::base {
   $ntp_servers  = hiera(ntp::servers)
 
   class { "::motd":
-    content => $motd_content
+    content => $motd_content,
   }
 
   class { "::ntp":
-    servers => $ntp_servers
+    servers => $ntp_servers,
   }
 
   #include ::ssh::server
