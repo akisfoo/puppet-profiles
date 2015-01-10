@@ -9,7 +9,4 @@ class profiles::base {
   class { "::ntp":
     servers => $ntp_servers,
   }
-
-  #include ::ssh::server
-  #include ::ssh::client
 }
