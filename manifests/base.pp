@@ -1,5 +1,5 @@
 class profiles::base {
-  $motd_content = hiera(motd::content)
+  $motd_content = hiera(motd::content) 
   $ntp_servers  = hiera(ntp::servers)
 
   class { "::motd":
