@@ -1,3 +1,5 @@
 class profiles::graphite {
-  gr_apache_24 => true,
+  class { "::graphite":
+    gr_apache_24 => true,
+  }
 }
